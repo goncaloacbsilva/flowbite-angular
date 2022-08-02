@@ -21,6 +21,7 @@ import {
   DemoPageComponent,
   PrismComponent,
 } from './common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const PAGES_COMPONENTS = [
   AccordionPageComponent,
@@ -38,7 +39,13 @@ const COMMON_COMPONENTS = [
 
 @NgModule({
   declarations: [AppComponent, PAGES_COMPONENTS, COMMON_COMPONENTS],
-  imports: [BrowserModule, RoutingModule, FlowbiteModule, ScullyLibModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    RoutingModule,
+    FlowbiteModule,
+    ScullyLibModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
